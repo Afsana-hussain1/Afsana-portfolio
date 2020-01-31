@@ -1,0 +1,102 @@
+how to declare an array;
+
+int [] nums = new int[3]
+
+(data type) , array brackets to declare that it is an array, and the name of the array
+equals new int array with a size of 3
+
+arrays are best used when you know the size that you should allocate 
+to the array
+
+
+int[] nums = new int[3];
+if I did this --> System.out.println(nums); <-- it would only print out
+the location in memory of this array . ex: [I@38af3868
+but if i did whats below:
+System.out.println(Arrays.toString(nums)); <-- this prints out the nums of the array
+use the arrays class "Arrays" use the dot operater and use the tostring to print out the array
+all items in the array are initialized to 0: [0,0,0];
+
+
+How to store and initalize values in an array:
+//declare array: 
+int[]nums = new int[3];
+nums[0]=10;
+nums[1]=20;
+nums[2]= 30;
+System.out.println(Arrays.toString(nums));
+}
+
+output: [10,20,30]
+
+
+you can also initialize values in an array when you first declare the array:
+ex:
+int[]nums = {10,20,30};
+System.out.println(nums.length);
+the".length" prints out the length of the array
+
+
+if we wanted to store 4 items in our array, we would have to create another array,
+copy all of the existing items from the previous array, the add the 4th item
+
+there is a way to add and remove items from  an array:
+Array nums = new Array(length:3);
+nums.insert(item:10); <--index 0
+nums.inset(item:20);<--index1
+nums.insert(item:30);<--index2
+nums.insert(item:40);<--index3
+nums.removeAt(index:3);<--index4
+nums.print();
+}
+this action will remove the number at index 3 so the output will look like this:
+10
+20
+30
+it has removed the number at index 3 : which was 40;
+
+you also have an action which can give you the index of an item:
+System.out.println(nums.indexOf(10));
+and it will print out the index where num 10 is located: which is index 0;
+in the case that the item does not exist it will print -1;
+
+Array catfoodPrice = new Array(length:5);
+catfoodPrice.insert(item: 40);
+catfoodPrice.insert(item:50);
+catfoodPrice.insert(item:60);
+catfoodPrice.insert(item:70);
+catfoodPrice.insert(item:80);
+catfoodPrice.print();
+40
+50
+60
+70
+80
+
+catfoodPrice.removeAt(index:0); <-- 40 is in index 0
+catfoodPrice.print();
+50
+60
+70
+80
+
+if I want to find what index the element 60 is in:
+System.out.println(catfoodPrice.indexOf(60));
+it should print out the index 2;
+
+
+
+dyanamic arrays
+
+
+Java has 2 implementations of dynamic arrays
+Vector : grows by 100% of its size once it gets full - All methods in vector is synchronized(only a single thread can access that method)
+
+ArrayList: grows by 50% of its size once it gets full
+
+
+
+
+
+
+
